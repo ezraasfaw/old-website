@@ -31,20 +31,32 @@ body {
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     min-height: 100vh;
-  
     background-color: var(--primary-color);
 }
-    
-.main-content {
-  flex: 1;
-}
-    
 
-.intro_text {
+body.dark-mode {
+  color: white;
+}
+
+body.dark-mode .back-button,
+body.dark-mode ul,
+body.dark-mode ul a,
+body.dark-mode #menuOptions,
+body.dark-mode .typewriter { 
+  color: white;
+}
+
+
+
+
+.text {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .nav_content {
@@ -78,20 +90,171 @@ ul li a {
   transition: all 0.3s ease;
 }
 
+
 @media (max-width: 768px) {
   ul {
     flex-direction: column;
   }
 }
 
-
-
-.footer {
-  width: 100%;
-  background-color: var(--primary-color-dark);
-  color: var(--primary-color);
-  padding: 2rem 0;
-  position: fixed;
-  bottom: 0;
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
 }
+
+.menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: inherit; /* Change this to the color you want for the button text */
+  font: inherit; /* Change this to the font you want for the button text */
+  cursor: pointer;
+  padding: 0;
+  outline: inherit;
+  font-size: 1rem;
+  font-weight: bold; /* Added font-weight property */
+  color: var(--primary-color-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the buttons horizontally */
+}
+
+#menuOptions {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid black; /* The cursor */
+  animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+}
+
+#menuOptions ul li a {
+  animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+}
+
+
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+  from { border-color: rgb(0, 0, 0); }
+  to { border-color: transparent; }
+}
+
+#darkModeToggle {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1em; /* Change this to the size of your menu button */
+  font-weight: bold; /* Make the text bold */
+  color: #000; /* Black text */
+  background: none; /* No background */
+  border: none; /* No border */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.3s ease; /* Transition */
+  align-items: center;
+}
+
+body.dark-mode #darkModeToggle {
+  color: #fff; /* White text in dark mode */
+}
+
+#darkModeToggle:hover {
+  color: #ff0000; /* Darker green on hover */
+}
+
+body.dark-mode .menu-button {
+  color: #fff; /* Change this to the color you want for the button text in dark mode */
+}
+
+#darkModeToggle:hover {
+  color: #ff0000; /* Darker green on hover */
+}
+
+body.dark-mode .menu-button {
+  color: #fff; /* Change this to the color you want for the button text in dark mode */
+}
+
+#darkModeToggle.light-mode:hover {
+  color: #00d5ff; /* Red text on hover in light mode */
+}
+
+#cursor {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%); /* This will center the cursor */
+  mix-blend-mode: difference;
+  background-color: white;
+  
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
+
+
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid black;
+  white-space: nowrap;
+  animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+  direction: ltr;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly between the items */
+  align-items: center; /* Align items vertically in the center */
+  width: 100%; /* Full width */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 200px; /* Replace with your desired width */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 

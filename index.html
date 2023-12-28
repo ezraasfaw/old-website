@@ -7,27 +7,59 @@
   <link  type="text/css" rel="stylesheet" href="style.css">
   <title>Home</title>
 </head>
+
 <body>
+  
   <header>
     <div class="logo">
-      <!-- Your logo goes here -->
+      <a href="index.html">
+        <img id="logoImage" src="assets/logo_B.png" alt="Logo">
+      </a>
     </div>
+  
+
     <div class="header-right">
-      <div class="language-toggle">
-        <!-- English to French toggle goes here -->
-      </div>
-      <div class="dark-mode-toggle">
-        <!-- Dark mode toggle goes here -->
-      </div>
-      <div class="hamburger-button">
-        <!-- Hamburger button goes here -->
-      </div>
+        <div class="language-toggle">
+          <!-- English to French toggle goes here -->
+        </div>
+
+        <div id="buttonsContainer">
+          <button class="menu-button">MENU</button>
+        </div>
+
+        <div class="text-container">
+            <!-- Your text goes here -->
+          </div>
+          
+          <div id="menuOptions" style="display: none;">
+            <ul>
+              <li><a href="index.html">> HOME</a></li>
+              <li><a href="about.html">> ABOUT</a></li>
+              <li><a href="experiences.html">> EXPERIENCES</a></li>
+              <li><a href="projects.html">> PROJECTS</a></li>
+              <li><a href="contact.html">> CONTACT</a></li>
+            </ul>
+            
+              <button id="darkModeToggle">DARK MODE</button>
+            
+          </div>
+
     </div>
-  </header>
-    
-  <div class="intro_text">
+
+    <div class="back-button">
+        <ul>
+            
+        </ul>
+        
+    </div>
+
+</header>
+  
+  
+  <div class="typewriter">
+  <div class="text">
     <h1>HI, I'M EZRA</h1>
-    <p>I AM A SOFTWARE ENGINEERING STUDENT AT THE UNIVERSITY OF WATERLOO. </p>
+    <p>I AM A SOFTWARE ENGINEERING STUDENT AT THE UNIVERSITY OF RIZZOLOGY WITH PROFESSOR GABRIZZEL. </p>
   </div>
 
   <div class="nav_content">
@@ -38,13 +70,19 @@
       <li><a href="contact.html">> CONTACT</a></li>
     </ul>
   </div>
+  
+</div>
 
-  <footer>
-    <div class="link_wrapper">
-      <div class="footer_text">
-        <p>© 2024 EZRA ASFAW</p>
-      </div>
+
+<footer>
+  <div class="link_wrapper">
+    <div class="footer_text">
+      <p>© 2024 EZRA ASFAW</p>
     </div>
-  </footer>
+  </div>
+</footer>
+
+  <div id="cursor"></div>
+  <script src="script.js"></script>
 </body>
 </html>
