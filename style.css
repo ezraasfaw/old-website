@@ -1,9 +1,9 @@
 /* GENERAL */
 
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5'); /*https://www.cdnfonts.com/helvetica-neue-5.font*/
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
-:root{
+:root {
     --primary-color: #ffffff;
     --primary-color-dark: #000000;
     --secondary-color: #ff0000;
@@ -20,34 +20,21 @@
     text-decoration: none;
 }
 
-a{
-  text-decoration: none;
-}
-
 body {
     font-family: 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-color: var(--primary-color);
+    cursor: invert;
 }
 
 body.dark-mode {
   color: white;
+  background-color: #000000;
 }
-
-body.dark-mode .back-button,
-body.dark-mode ul,
-body.dark-mode ul a,
-body.dark-mode #menuOptions,
-body.dark-mode .typewriter { 
-  color: white;
-}
-
-
-
 
 .text {
   display: flex;
@@ -77,19 +64,18 @@ ul {
   display: flex;
   align-self: center;
   gap: 1rem;
-  list-style: none;
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 ul li a {
   font-size: 1rem;
-  font-weight: bold; /* Added font-weight property */
+  font-weight: bold;
   color: var(--primary-color-dark);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-
 
 @media (max-width: 768px) {
   ul {
@@ -110,37 +96,39 @@ ul li a {
   right: 0;
   background: none;
   border: none;
-  color: inherit; /* Change this to the color you want for the button text */
-  font: inherit; /* Change this to the font you want for the button text */
+  color: inherit;
+  font: inherit;
   cursor: pointer;
   padding: 0;
   outline: inherit;
   font-size: 1rem;
-  font-weight: bold; /* Added font-weight property */
+  font-weight: bold;
   color: var(--primary-color-dark);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
+body.dark-mode .menu-button {
+  color: #fff;
+}
+
 #buttonsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the buttons horizontally */
+  align-items: center;
 }
 
 #menuOptions {
   white-space: nowrap;
   overflow: hidden;
-  border-right: .15em solid black; /* The cursor */
+  border-right: .15em solid black;
   animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
 }
 
 #menuOptions ul li a {
   animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
 }
-
-
 
 @keyframes typewriter {
   from { width: 0; }
@@ -154,41 +142,37 @@ ul li a {
 
 #darkModeToggle {
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1em; /* Change this to the size of your menu button */
-  font-weight: bold; /* Make the text bold */
-  color: #000; /* Black text */
-  background: none; /* No background */
-  border: none; /* No border */
-  text-align: center; /* Centered text */
-  text-decoration: none; /* No underline */
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+  background: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: color 0.3s ease; /* Transition */
-  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 52%;
+  left: 47%;
+  
 }
+
+.parent-container {
+  position: relative; /* Make the parent container a positioning context */
+}
+
 
 body.dark-mode #darkModeToggle {
-  color: #fff; /* White text in dark mode */
+  color: #fff;
 }
 
 #darkModeToggle:hover {
-  color: #ff0000; /* Darker green on hover */
-}
-
-body.dark-mode .menu-button {
-  color: #fff; /* Change this to the color you want for the button text in dark mode */
-}
-
-#darkModeToggle:hover {
-  color: #ff0000; /* Darker green on hover */
-}
-
-body.dark-mode .menu-button {
-  color: #fff; /* Change this to the color you want for the button text in dark mode */
+  color: #ff0000;
 }
 
 #darkModeToggle.light-mode:hover {
-  color: #00d5ff; /* Red text on hover in light mode */
+  color: #00d5ff;
 }
 
 #cursor {
@@ -198,18 +182,10 @@ body.dark-mode .menu-button {
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
-  transform: translate(-50%, -50%); /* This will center the cursor */
+  transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   background-color: white;
-  
 }
-
-body.dark-mode {
-  background-color: #000000;
-  color: #fff;
-}
-
-
 
 .typewriter {
   overflow: hidden;
@@ -228,16 +204,17 @@ body.dark-mode {
   50% { border-color: transparent; }
 }
 
+.logo {
+  position: absolute; /* Position the logo absolutely */
+  top: 0; /* Position the logo at the top of the header */
+  left: 50%; /* Center the logo horizontally */
+  transform: translateX(-50%); /* Adjust for the logo's width to ensure it's centered */
+  padding-top: 10px; /* Add padding to the top */
+}
+
 .logo img {
   width: 50px;
   height: 50px;
-}
-
-.logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  padding: 10px;
 }
 
 .header {
@@ -256,5 +233,3 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
-

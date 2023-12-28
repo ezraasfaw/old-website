@@ -87,6 +87,15 @@ nav.addEventListener('mouseout', () => {
   cursor.style.mixBlendMode = "difference"; /* This will invert the color */
 });
 
+menuOptions.addEventListener('mouseover', () => {
+  cursor.style.backgroundColor = 'red';
+});
+
+menuOptions.addEventListener('mouseout', () => {
+  cursor.style.backgroundColor = 'white';
+  cursor.style.mixBlendMode = "difference"; /* This will invert the color */
+});
+
 
 menuButton.addEventListener('click', () => {
   // If menuOptions is displayed, hide it, otherwise, display it
