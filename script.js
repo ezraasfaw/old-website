@@ -53,6 +53,7 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 const logoImage = document.getElementById('logoImage');
 const menuOptions = document.getElementById('menuOptions'); // Add this line
 const nav = document.querySelector('.nav_content');
+const textDiv = document.querySelector('.text'); // Add this line
 
 // Function to set dark mode
 function setDarkMode(isDarkMode) {
@@ -62,6 +63,7 @@ function setDarkMode(isDarkMode) {
   darkModeToggle.classList.toggle('light-mode', isDarkMode);
   menuOptions.classList.toggle('dark-mode', isDarkMode); // Add this line
   nav.classList.toggle('dark-mode', isDarkMode); // Add this line
+  textDiv.classList.toggle('dark-mode', isDarkMode); // Add this line
   localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
 }
 

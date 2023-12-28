@@ -81,6 +81,10 @@ ul li a {
   transition: all 0.3s ease;
 }
 
+.text.dark-mode ul li a {
+  color: white;
+}
+
 @media (max-width: 768px) {
   ul {
     flex-direction: column;
