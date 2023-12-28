@@ -51,6 +51,8 @@ menuButton.addEventListener('mouseout', () => {
 // Get references to the elements
 const darkModeToggle = document.getElementById('darkModeToggle');
 const logoImage = document.getElementById('logoImage');
+const menuOptions = document.getElementById('menuOptions'); // Add this line
+const nav = document.querySelector('.nav_content');
 
 // Function to set dark mode
 function setDarkMode(isDarkMode) {
@@ -58,6 +60,8 @@ function setDarkMode(isDarkMode) {
   darkModeToggle.textContent = isDarkMode ? 'LIGHT MODE' : 'DARK MODE';
   logoImage.src = isDarkMode ? 'assets/logo_W.png' : 'assets/logo_B.png';
   darkModeToggle.classList.toggle('light-mode', isDarkMode);
+  menuOptions.classList.toggle('dark-mode', isDarkMode); // Add this line
+  nav.classList.toggle('dark-mode', isDarkMode); // Add this line
   localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
 }
 
@@ -74,9 +78,7 @@ darkModeToggle.addEventListener('click', () => {
 
 
 
-const text = document.querySelector('.text');
-const menuOptions = document.getElementById('menuOptions');
-const nav = document.querySelector('.nav_content'); 
+const text = document.querySelector('.text'); 
 
 nav.addEventListener('mouseover', () => {
   cursor.style.backgroundColor = 'red';

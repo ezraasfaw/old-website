@@ -60,6 +60,10 @@ body.dark-mode {
   align-items: center;
 }
 
+.nav_content.dark-mode ul li a {
+  color: white;
+}
+
 ul {
   display: flex;
   align-self: center;
@@ -124,6 +128,14 @@ body.dark-mode .menu-button {
   overflow: hidden;
   border-right: .15em solid black;
   animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+}
+
+#menuOptions.dark-mode {
+  color: white;
+}
+
+#menuOptions.dark-mode ul li a {
+  color: white;
 }
 
 #menuOptions ul li a {
