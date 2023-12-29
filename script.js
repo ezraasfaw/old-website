@@ -1,9 +1,21 @@
 var cursor = document.getElementById('cursor');
 
+// For mouse movement
 document.addEventListener('mousemove', function(e) {
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';
-});
+},false);
+
+// For touch movement
+document.addEventListener('touchmove', function(e) {
+  // Prevent the browser from doing its default thing (scroll, zoom)
+  e.preventDefault();
+
+  var touch = e.touches[0]; // Get the information for finger #1
+
+  cursor.style.left = touch.pageX + 'px';
+  cursor.style.top = touch.pageY + 'px';
+}, false);
 
 const ul = document.querySelector('ul');
 
