@@ -147,7 +147,7 @@ body.dark-mode .menu-button {
 }
 
 #menuOptions ul li a {
-  animation: typing 1.5s steps(50, end), blink .75s step-end infinite;
+  animation: typing 0.5s steps(50, end), blink .75s step-end infinite;
 }
 
 @keyframes typewriter {
