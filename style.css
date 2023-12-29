@@ -240,7 +240,7 @@ body.dark-mode #darkModeToggle {
   cursor: pointer;
 }
 
-.link-git.dark-mode {
+.github-link.dark-mode {
   color: white;
 }
 
