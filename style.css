@@ -173,7 +173,7 @@ body.dark-mode .menu-button {
   cursor: pointer;
   transition: color 0.3s ease;
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   
 }
