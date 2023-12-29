@@ -102,6 +102,10 @@ ul li a {
   padding: 10px;
 }
 
+.back-button.dark-mode a {
+  color: #fff; /* This will make the back button white in dark mode */
+}
+
 .menu-button {
   position: absolute;
   top: 0;
