@@ -1,4 +1,6 @@
-var cursor = document.getElementById('cursor');
+window.onload = function() {
+  
+  var cursor = document.getElementById('cursor');
 
 // For mouse movement
 document.addEventListener('mousemove', function(e) {
@@ -134,3 +136,8 @@ var backButton = document.querySelector('.back-button');
 menuButton.addEventListener('click', function() {
   backButton.style.display = 'none';
 });
+
+};
+
+
+
