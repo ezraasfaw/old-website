@@ -172,19 +172,13 @@ body.dark-mode .menu-button {
   display: inline-block;
   cursor: pointer;
   transition: color 0.3s ease;
-  position: absolute;
-  top: 52%;
-  left: 47%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   
 }
 
-@media (max-width: 768px) {
-  #darkModeToggle  {
-    top: 60%;
-    left: 40%;
-    
-  }
-}
+
 
 
 .parent-container {
