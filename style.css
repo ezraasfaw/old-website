@@ -174,6 +174,27 @@ body.dark-mode .menu-button {
   
 }
 
+@media (max-width: 768px) {
+  #darkModeToggle  {
+    top: 60%;
+    left: 40%;
+  }
+}
+
+.dark-mode-button {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+  background: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
 .parent-container {
   position: relative; /* Make the parent container a positioning context */
 }
@@ -204,11 +225,16 @@ body.dark-mode #darkModeToggle {
 }
 
 .typewriter {
+  width: fit-content;
   overflow: hidden;
   border-right: .15em solid black;
   white-space: nowrap;
   animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
   direction: ltr;
+}
+
+.typewriter.dark-mode {
+  border-right: .15em solid white;
 }
 
 @keyframes typing {
@@ -219,6 +245,7 @@ body.dark-mode #darkModeToggle {
 @keyframes blink {
   50% { border-color: transparent; }
 }
+
 
 .logo {
   position: absolute; /* Position the logo absolutely */

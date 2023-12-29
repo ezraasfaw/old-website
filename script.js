@@ -54,6 +54,7 @@ const logoImage = document.getElementById('logoImage');
 const menuOptions = document.getElementById('menuOptions'); // Add this line
 const nav = document.querySelector('.nav_content');
 const textDiv = document.querySelector('.text'); // Add this line
+const typewriter = document.querySelector('.typewriter');
 
 // Function to set dark mode
 function setDarkMode(isDarkMode) {
@@ -64,6 +65,7 @@ function setDarkMode(isDarkMode) {
   menuOptions.classList.toggle('dark-mode', isDarkMode); // Add this line
   nav.classList.toggle('dark-mode', isDarkMode); // Add this line
   textDiv.classList.toggle('dark-mode', isDarkMode); // Add this line
+  typewriter.classList.toggle('dark-mode', isDarkMode);
   localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
 }
 
@@ -115,3 +117,8 @@ menuButton.addEventListener('click', () => {
 });
 
 
+var backButton = document.querySelector('.back-button');
+
+menuButton.addEventListener('click', function() {
+  backButton.style.display = 'none';
+});
