@@ -254,11 +254,20 @@ body.dark-mode #darkModeToggle {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%; /* Center the logo horizontally */
   transform: translateX(-50%); /* Adjust for the logo's width to ensure it's centered */
   padding-bottom: 10px; /* Add padding to the top */
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    padding-left: 200px; /* Add 20px of space to the left of the footer */
+  }
 }
