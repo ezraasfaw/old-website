@@ -232,6 +232,17 @@ body.dark-mode #darkModeToggle {
   50% { border-color: transparent; }
 }
 
+.link{
+  color: var(--primary-color-dark);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.link.dark-mode {
+  color: white;
+}
 
 .logo {
   position: absolute; /* Position the logo absolutely */
