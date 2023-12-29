@@ -182,22 +182,10 @@ body.dark-mode .menu-button {
   #darkModeToggle  {
     top: 60%;
     left: 40%;
+    
   }
 }
 
-.dark-mode-button {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1em;
-  font-weight: bold;
-  color: #000;
-  background: none;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
 
 .parent-container {
   position: relative; /* Make the parent container a positioning context */
