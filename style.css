@@ -135,7 +135,7 @@ body.dark-mode .menu-button {
   white-space: nowrap;
   overflow: hidden;
   border-right: .15em solid black;
-  animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+  animation: typing 0.5s steps(50, end), blink .75s step-end infinite;
 }
 
 #menuOptions.dark-mode {
@@ -147,7 +147,7 @@ body.dark-mode .menu-button {
 }
 
 #menuOptions ul li a {
-  animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+  animation: typing 1.5s steps(50, end), blink .75s step-end infinite;
 }
 
 @keyframes typewriter {
@@ -221,7 +221,7 @@ body.dark-mode #darkModeToggle {
   overflow: hidden;
   border-right: .15em solid black;
   white-space: nowrap;
-  animation: typing 3.5s steps(50, end), blink .75s step-end infinite;
+  animation: typing 2.5s steps(50, end), blink .75s step-end infinite;
   direction: ltr;
 }
 
