@@ -57,16 +57,16 @@ menuButton.addEventListener('mouseout', () => {
   cursor.style.mixBlendMode = "difference"; /* This will invert the color */
 });
 
-const link = document.querySelector('.link');
+const link = document.querySelector('.link-git');
 
-link.addEventListener('mouseover', () => {
-  cursor.style.backgroundColor = 'red';
-});
+// link.addEventListener('mouseover', () => {
+//   cursor.style.backgroundColor = 'red';
+// });
 
-link.addEventListener('mouseout', () => {
-  cursor.style.backgroundColor = 'white';
-  cursor.style.mixBlendMode = "difference"; /* This will invert the color */
-});
+// link.addEventListener('mouseout', () => {
+//   cursor.style.backgroundColor = 'white';
+//   cursor.style.mixBlendMode = "difference"; /* This will invert the color */
+// });
 
 
 
@@ -87,11 +87,12 @@ function setDarkMode(isDarkMode) {
   darkModeToggle.textContent = isDarkMode ? 'LIGHT MODE' : 'DARK MODE';
   logoImage.src = isDarkMode ? 'assets/logo_W.png' : 'assets/logo_B.png';
   darkModeToggle.classList.toggle('light-mode', isDarkMode);
-  link.classList.toggle('dark-mode', isDarkMode);
+  
   menuOptions.classList.toggle('dark-mode', isDarkMode); // Add this line
   nav.classList.toggle('dark-mode', isDarkMode); // Add this line
   textDiv.classList.toggle('dark-mode', isDarkMode); // Add this line
   typewriter.classList.toggle('dark-mode', isDarkMode);
+  link.classList.toggle('dark-mode', isDarkMode);
   localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
 }
 

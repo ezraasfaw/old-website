@@ -232,7 +232,7 @@ body.dark-mode #darkModeToggle {
   50% { border-color: transparent; }
 }
 
-.link{
+.link-git{
   color: var(--primary-color-dark);
   text-decoration: none;
   font-weight: bold;
@@ -240,7 +240,7 @@ body.dark-mode #darkModeToggle {
   cursor: pointer;
 }
 
-.link.dark-mode {
+.link-git.dark-mode {
   color: white;
 }
 
