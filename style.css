@@ -29,6 +29,7 @@ body {
     min-height: 100vh;
     background-color: var(--primary-color);
     cursor: invert;
+    overflow: auto;
 }
 
 body.dark-mode {
