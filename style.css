@@ -256,9 +256,9 @@ body.dark-mode #darkModeToggle {
 footer {
   position: absolute;
   bottom: 0;
-  width: 200px; /* Replace with your desired width */
-  left: 0;
-  right: 0;
+  left: 50%; /* Center the logo horizontally */
+  transform: translateX(-50%); /* Adjust for the logo's width to ensure it's centered */
+  padding-bottom: 10px; /* Add padding to the top */
   margin-left: auto;
   margin-right: auto;
 }
