@@ -92,7 +92,7 @@ function setDarkMode(isDarkMode) {
   nav.classList.toggle('dark-mode', isDarkMode); // Add this line
   textDiv.classList.toggle('dark-mode', isDarkMode); // Add this line
   typewriter.classList.toggle('dark-mode', isDarkMode);
-  link.classList.toggle('dark-mode', isDarkMode);
+  // link.classList.toggle('dark-mode', isDarkMode);
   localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
 }
 
