@@ -17,7 +17,7 @@ document.addEventListener('touchmove', function(e) {
 
   cursor.style.left = touch.pageX + 'px';
   cursor.style.top = touch.pageY + 'px';
-}, false);
+}, { passive: false }); // Add this line
 
 const ul = document.querySelector('ul');
 
@@ -130,9 +130,3 @@ menuButton.addEventListener('click', () => {
   }
 });
 };
-
-
-
-window.addEventListener('wheel', function(e) {
-  if (e.deltaY < 0) e.preventDefault();
-}, { passive: false });
