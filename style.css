@@ -20,6 +20,11 @@
     text-decoration: none;
 }
 
+html {
+  overflow: auto;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     display: flex;
@@ -29,7 +34,7 @@ body {
     min-height: 100vh;
     background-color: var(--primary-color);
     cursor: invert;
-    overflow: auto;
+    
 }
 
 body.dark-mode {

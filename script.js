@@ -133,3 +133,6 @@ menuButton.addEventListener('click', () => {
 
 
 
+window.addEventListener('wheel', function(e) {
+  if (e.deltaY < 0) e.preventDefault();
+}, { passive: false });
