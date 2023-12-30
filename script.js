@@ -102,15 +102,19 @@ darkModeToggle.addEventListener('click', () => {
   setDarkMode(!isDarkMode);
 });
 
+// Get all the 'li a' elements
+var links = document.querySelectorAll('li a');
 
-// Add event listeners for mouseover and mouseout to the nav
-nav.addEventListener('mouseover', () => {
-  cursor.style.backgroundColor = 'red';
-});
+// Add event listeners for mouseover and mouseout to each 'li a' element
+links.forEach(link => {
+  link.addEventListener('mouseover', () => {
+    cursor.style.backgroundColor = 'red';
+  });
 
-nav.addEventListener('mouseout', () => {
-  cursor.style.backgroundColor = 'white';
-  cursor.style.mixBlendMode = "difference"; // This will invert the color
+  link.addEventListener('mouseout', () => {
+    cursor.style.backgroundColor = 'white'; // Set a color other than 'transparent'
+    cursor.style.mixBlendMode = "difference"; // This will invert the color
+  });
 });
 
 // Add event listeners for mouseover and mouseout to the menu options
