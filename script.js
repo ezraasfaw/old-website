@@ -140,3 +140,9 @@ menuButton.addEventListener('click', () => {
     nav.style.display = 'block'; // Show the nav-content
   }
 });
+
+// Add an event listener to the menu button
+menuButton.addEventListener('click', function() {
+  // Toggle the 'hidden' class on the back button
+  backButton.classList.toggle('hidden');
+});
