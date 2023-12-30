@@ -8,23 +8,23 @@ const nav = document.querySelector('.nav_content');
 const textDiv = document.querySelector('.text');
 const typewriter = document.querySelector('.typewriter');
 const backButton = document.querySelector('.back-button');
-const text = document.querySelector('.text'); 
-
+const text = document.querySelector('.text');
+const ul = document.querySelector('ul');
 
 // Wait for the window to load before executing the script
-window.onload = function() {
+window.onload = function () {
   // Get the cursor element
   var cursor = document.getElementById('cursor');
 
   // Event listener for mouse movement
-  document.addEventListener('mousemove', function(e) {
+  document.addEventListener('mousemove', function (e) {
     // Update the cursor's position to follow the mouse
     cursor.style.left = e.pageX + 'px';
     cursor.style.top = e.pageY + 'px';
   }, false);
 
   // Event listener for touch movement
-  document.addEventListener('touchmove', function(e) {
+  document.addEventListener('touchmove', function (e) {
     // Prevent the browser from doing its default thing (scroll, zoom)
     e.preventDefault();
 
@@ -36,8 +36,21 @@ window.onload = function() {
     cursor.style.top = touch.pageY + 'px';
   }, { passive: false }); // This line tells the browser that the event handler may call preventDefault()
 
-  // Get the ul element
-  const ul = document.querySelector('ul');
+
+  // Hide the cursor as soon as the script is loaded
+  $('#cursor').hide();
+
+  $(document).ready(function () {
+    // Show the cursor when the mouse enters the document
+    $(document).mouseenter(function () {
+      $('#cursor').show();
+    });
+
+    // Hide the cursor when the mouse leaves the document
+    $(document).mouseleave(function () {
+      $('#cursor').hide();
+    });
+  });
 
   // If the ul element exists, add event listeners for mouseover and mouseout
   if (ul) {
@@ -83,7 +96,7 @@ function setDarkMode(isDarkMode) {
   darkModeToggle.textContent = isDarkMode ? 'LIGHT MODE' : 'DARK MODE';
   logoImage.src = isDarkMode ? 'assets/logo_W.png' : 'assets/logo_B.png';
   darkModeToggle.classList.toggle('light-mode', isDarkMode);
-  
+
   menuOptions.classList.toggle('dark-mode', isDarkMode); // Add this line
   nav.classList.toggle('dark-mode', isDarkMode); // Add this line
   textDiv.classList.toggle('dark-mode', isDarkMode); // Add this line
@@ -142,7 +155,7 @@ menuButton.addEventListener('click', () => {
 });
 
 // Add an event listener to the menu button
-menuButton.addEventListener('click', function() {
+menuButton.addEventListener('click', function () {
   // Toggle the 'hidden' class on the back button
   backButton.classList.toggle('hidden');
 });

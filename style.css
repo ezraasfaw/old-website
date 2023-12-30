@@ -4,138 +4,208 @@
 
 /* Root variables for easy color management */
 :root {
-    --primary-color: #ffffff; /* Primary color set to white */
-    --primary-color-dark: #000000; /* Dark variant of the primary color set to black */
-    --secondary-color: #ff0000; /* Secondary color set to red */
-    --text-dark: var(--primary-color-dark); /* Text color for dark themes set to dark primary color */
-    --text-light: var(--primary-color); /* Text color for light themes set to primary color */
-    --max-width: 1200px; /* Maximum width set to 1200px */
+  --primary-color: #ffffff;
+  /* Primary color set to white */
+  --primary-color-dark: #000000;
+  /* Dark variant of the primary color set to black */
+  --secondary-color: #ff0000;
+  /* Secondary color set to red */
+  --text-dark: var(--primary-color-dark);
+  /* Text color for dark themes set to dark primary color */
+  --text-light: var(--primary-color);
+  /* Text color for light themes set to primary color */
+  --max-width: 1200px;
+  /* Maximum width set to 1200px */
 }
 
 /* General styles applied to all elements */
 * {
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Removes default padding */
-    box-sizing: border-box; /* Changes box model to include padding and border in element's total width and height */
-    list-style: none; /* Removes default list styles */
-    text-decoration: none; /* Removes default text decorations */
+  margin: 0;
+  /* Removes default margins */
+  padding: 0;
+  /* Removes default padding */
+  box-sizing: border-box;
+  /* Changes box model to include padding and border in element's total width and height */
+  list-style: none;
+  /* Removes default list styles */
+  text-decoration: none;
+  /* Removes default text decorations */
 }
 
 /* Smooth scrolling */
 html {
-    overflow: auto; /* Allows scrolling */
-    scroll-behavior: smooth; /* Makes scrolling smooth */
+  overflow: auto;
+  /* Allows scrolling */
+  scroll-behavior: smooth;
+  /* Makes scrolling smooth */
 }
 
 /* Body styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif; /* Sets the font family */
-    display: flex; /* Makes the body a flex container */
-    flex-direction: column; /* Changes the direction of the flex items to a column */
-    justify-content: center; /* Centers the flex items along the horizontal line */
-    align-items: center; /* Centers the flex items along the vertical line */
-    min-height: 100vh; /* Sets the minimum height to 100% of the viewport height */
-    background-color: var(--primary-color); /* Sets the background color to the primary color */
-    cursor: invert; /* Inverts the cursor color based on the background color */
+  font-family: 'Helvetica Neue', sans-serif;
+  /* Sets the font family */
+  display: flex;
+  /* Makes the body a flex container */
+  flex-direction: column;
+  /* Changes the direction of the flex items to a column */
+  justify-content: center;
+  /* Centers the flex items along the horizontal line */
+  align-items: center;
+  /* Centers the flex items along the vertical line */
+  min-height: 100vh;
+  /* Sets the minimum height to 100% of the viewport height */
+  background-color: var(--primary-color);
+  /* Sets the background color to the primary color */
+  cursor: invert;
+  /* Inverts the cursor color based on the background color */
 }
 
 /* Dark mode styles for the body */
 body.dark-mode {
-  color: white; /* Changes the text color to white in dark mode */
-  background-color: #000000; /* Changes the background color to black in dark mode */
+  color: white;
+  /* Changes the text color to white in dark mode */
+  background-color: #000000;
+  /* Changes the background color to black in dark mode */
 }
 
 /* Styles for the text class */
 .text {
-  display: flex; /* Makes the text a flex container */
-  justify-content: center; /* Centers the flex items along the horizontal line */
-  flex-direction: column; /* Changes the direction of the flex items to a column */
-  align-items: center; /* Centers the flex items along the vertical line */
-  width: 100%; /* Sets the width to 100% */
-  overflow-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
-  white-space: normal; /* Allows white space to wrap */
-  padding-left: 50px; /* Adds a left padding */
-  padding-right: 50px; /* Adds a right padding */
-  text-align: center; /* Centers the text */
-  text-align-last: center; /* Centers the last line of text */
+  display: flex;
+  /* Makes the text a flex container */
+  justify-content: center;
+  /* Centers the flex items along the horizontal line */
+  flex-direction: column;
+  /* Changes the direction of the flex items to a column */
+  align-items: center;
+  /* Centers the flex items along the vertical line */
+  width: 100%;
+  /* Sets the width to 100% */
+  overflow-wrap: break-word;
+  /* Allows long words to be broken and wrap to the next line */
+  white-space: normal;
+  /* Allows white space to wrap */
+  padding-left: 50px;
+  /* Adds a left padding */
+  padding-right: 50px;
+  /* Adds a right padding */
+  text-align: center;
+  /* Centers the text */
+  text-align-last: center;
+  /* Centers the last line of text */
 }
 
 /* Styles for the nav content */
 .nav_content {
-  display: flex; /* Makes the nav content a flex container */
-  justify-content: center; /* Centers the flex items along the horizontal line */
+  display: flex;
+  /* Makes the nav content a flex container */
+  justify-content: center;
+  /* Centers the flex items along the horizontal line */
 }
 
 /* Styles for the intro text inside the nav content */
 .nav_content .intro_text {
-  max-width: var(--max-width); /* Sets the maximum width to the root variable --max-width */
-  margin: auto; /* Centers the intro text horizontally */
-  padding: 1.5rem 1rem; /* Adds padding */
-  display: flex; /* Makes the intro text a flex container */
-  justify-content: center; /* Centers the flex items along the horizontal line */
-  align-items: center; /* Centers the flex items along the vertical line */
+  max-width: var(--max-width);
+  /* Sets the maximum width to the root variable --max-width */
+  margin: auto;
+  /* Centers the intro text horizontally */
+  padding: 1.5rem 1rem;
+  /* Adds padding */
+  display: flex;
+  /* Makes the intro text a flex container */
+  justify-content: center;
+  /* Centers the flex items along the horizontal line */
+  align-items: center;
+  /* Centers the flex items along the vertical line */
 }
 
 /* Dark mode styles for navigation content */
 .nav_content.dark-mode ul li a {
-  color: white; /* Changes the color of the links in dark mode */
+  color: white;
+  /* Changes the color of the links in dark mode */
 }
 
 /* Unordered list styles */
 ul {
-  display: flex; /* Makes the ul a flex container */
-  align-self: center; /* Centers the ul along the vertical line */
-  gap: 1rem; /* Adds a gap between the flex items */
-  transition: all 0.3s ease; /* Adds a transition effect to all properties */
-  cursor: default; /* Changes the cursor to the default cursor when hovering over the ul */
+  display: flex;
+  /* Makes the ul a flex container */
+  align-self: center;
+  /* Centers the ul along the vertical line */
+  gap: 1rem;
+  /* Adds a gap between the flex items */
+  transition: all 0.3s ease;
+  /* Adds a transition effect to all properties */
+  cursor: default;
+  /* Changes the cursor to the default cursor when hovering over the ul */
 }
 
 /* Link styles */
 ul li a {
-  font-size: 1rem; /* Sets the font size of the links */
-  font-weight: bold; /* Makes the text of the links bold */
-  color: var(--primary-color-dark); /* Sets the color of the links */
-  padding: 0.5rem 1rem; /* Adds padding around the links */
-  border-radius: 5px; /* Rounds the corners of the links */
-  transition: all 0.3s ease; /* Adds a transition effect to all properties */
+  font-size: 1rem;
+  /* Sets the font size of the links */
+  font-weight: bold;
+  /* Makes the text of the links bold */
+  color: var(--primary-color-dark);
+  /* Sets the color of the links */
+  padding: 0.5rem 1rem;
+  /* Adds padding around the links */
+  border-radius: 5px;
+  /* Rounds the corners of the links */
+  transition: all 0.3s ease;
+  /* Adds a transition effect to all properties */
 }
 
 /* Dark mode styles for text */
 .text.dark-mode ul li a {
-  color: white; /* Changes the color of the links in dark mode */
+  color: white;
+  /* Changes the color of the links in dark mode */
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   ul {
-    flex-direction: column; /* Changes the direction of the flex items to a column */
+    flex-direction: column;
+    /* Changes the direction of the flex items to a column */
   }
 }
 
 /* Styles for the cursor */
 .cursor {
-  width: 20px; /* Sets the width of the cursor */
-  height: 20px; /* Sets the height of the cursor */
-  border: 1px solid white; /* Adds a border around the cursor */
-  border-radius: 50%; /* Makes the cursor circular */
-  position: absolute; /* Positions the cursor absolutely */
-  pointer-events: none; /* Makes the cursor not respond to or trigger any events */
-  z-index: 10000; /* Puts the cursor on top of other elements */
-  mix-blend-mode: difference; /* Makes the cursor invert colors depending on the background */
-  transition: all 0.3s ease; /* Adds a transition effect to all properties */
+  width: 20px;
+  /* Sets the width of the cursor */
+  height: 20px;
+  /* Sets the height of the cursor */
+  border: 1px solid white;
+  /* Adds a border around the cursor */
+  border-radius: 50%;
+  /* Makes the cursor circular */
+  position: absolute;
+  /* Positions the cursor absolutely */
+  pointer-events: none;
+  /* Makes the cursor not respond to or trigger any events */
+  z-index: 10000;
+  /* Puts the cursor on top of other elements */
+  mix-blend-mode: difference;
+  /* Makes the cursor invert colors depending on the background */
+  transition: all 0.3s ease;
+  /* Adds a transition effect to all properties */
 }
 
 /* Styles for the back button */
 .back-button {
-  position: absolute; /* Positions the back button absolutely */
-  top: 0; /* Positions the back button at the top of the parent element */
-  left: 0; /* Positions the back button at the left of the parent element */
-  padding: 10px; /* Adds padding around the back button */
+  position: absolute;
+  /* Positions the back button absolutely */
+  top: 0;
+  /* Positions the back button at the top of the parent element */
+  left: 0;
+  /* Positions the back button at the left of the parent element */
+  padding: 10px;
+  /* Adds padding around the back button */
 }
 
 /* Dark mode styles for the back button */
 .back-button.dark-mode a {
-  color: #fff; /* Changes the color of the back button to white in dark mode */
+  color: #fff;
+  /* Changes the color of the back button to white in dark mode */
 }
 
 /* This class will hide the back button */
@@ -145,87 +215,144 @@ ul li a {
 
 /* Styles for the menu button */
 .menu-button {
-  position: absolute; /* Positions the menu button absolutely */
-  top: 0; /* Positions the menu button at the top of the nearest positioned ancestor */
-  right: 0; /* Positions the menu button at the right of the nearest positioned ancestor */
-  background: none; /* Removes the background of the menu button */
-  border: none; /* Removes the border of the menu button */
-  color: inherit; /* Inherits the color from the parent element */
-  font: inherit; /* Inherits the font from the parent element */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over the menu button */
-  padding: 0; /* Removes the padding of the menu button */
-  outline: inherit; /* Inherits the outline from the parent element */
-  font-size: 1rem; /* Sets the font size of the menu button to 1rem */
-  font-weight: bold; /* Makes the text of the menu button bold */
-  color: var(--primary-color-dark); /* Sets the color of the menu button to the dark primary color */
-  padding: 0.5rem 1rem; /* Adds top and bottom padding of 0.5rem and left and right padding of 1rem to the menu button */
-  border-radius: 5px; /* Rounds the corners of the menu button */
-  transition: all 0.3s ease; /* Adds a transition effect to all properties of the menu button */
+  position: absolute;
+  /* Positions the menu button absolutely */
+  top: 0;
+  /* Positions the menu button at the top of the nearest positioned ancestor */
+  right: 0;
+  /* Positions the menu button at the right of the nearest positioned ancestor */
+  background: none;
+  /* Removes the background of the menu button */
+  border: none;
+  /* Removes the border of the menu button */
+  color: inherit;
+  /* Inherits the color from the parent element */
+  font: inherit;
+  /* Inherits the font from the parent element */
+  cursor: pointer;
+  /* Changes the cursor to a pointer when hovering over the menu button */
+  padding: 0;
+  /* Removes the padding of the menu button */
+  outline: inherit;
+  /* Inherits the outline from the parent element */
+  font-size: 1rem;
+  /* Sets the font size of the menu button to 1rem */
+  font-weight: bold;
+  /* Makes the text of the menu button bold */
+  color: var(--primary-color-dark);
+  /* Sets the color of the menu button to the dark primary color */
+  padding: 0.5rem 1rem;
+  /* Adds top and bottom padding of 0.5rem and left and right padding of 1rem to the menu button */
+  border-radius: 5px;
+  /* Rounds the corners of the menu button */
+  transition: all 0.3s ease;
+  /* Adds a transition effect to all properties of the menu button */
 }
 
 /* Dark mode styles for the body with menu button */
 body.dark-mode .menu-button {
-  color: #fff; /* Changes the color of the menu button to white in dark mode */
+  color: #fff;
+  /* Changes the color of the menu button to white in dark mode */
 }
 
 /* Styles for the buttons container */
 #buttonsContainer {
-  display: flex; /* Makes the buttons container a flex container */
-  flex-direction: column; /* Changes the direction of the flex items to a column */
-  align-items: center; /* Centers the flex items along the vertical line */
+  display: flex;
+  /* Makes the buttons container a flex container */
+  flex-direction: column;
+  /* Changes the direction of the flex items to a column */
+  align-items: center;
+  /* Centers the flex items along the vertical line */
 }
 
 /* Styles for the menu options */
 #menuOptions {
-  white-space: nowrap; /* Prevents the text inside the menu options from wrapping */
-  overflow: hidden; /* Hides any content that overflows the menu options */
-  border-right: .15em solid black; /* Adds a right border to the menu options */
-  animation: typing 0.5s steps(50, end), blink .75s step-end infinite; /* Adds typing and blinking animations to the menu options */
+  white-space: nowrap;
+  /* Prevents the text inside the menu options from wrapping */
+  overflow: hidden;
+  /* Hides any content that overflows the menu options */
+  border-right: .15em solid black;
+  /* Adds a right border to the menu options */
+  animation: typing 0.5s steps(50, end), blink .75s step-end infinite;
+  /* Adds typing and blinking animations to the menu options */
 }
 
 /* Dark mode styles for menu options */
 #menuOptions.dark-mode {
-  color: white; /* Changes the color of the menu options to white in dark mode */
+  color: white;
+  /* Changes the color of the menu options to white in dark mode */
 }
 
 /* Dark mode styles for links in menu options */
 #menuOptions.dark-mode ul li a {
-  color: white; /* Changes the color of the links in the menu options to white in dark mode */
+  color: white;
+  /* Changes the color of the links in the menu options to white in dark mode */
 }
 
 /* Animation for links in menu options */
 #menuOptions ul li a {
-  animation: typing 0.5s steps(50, end), blink .75s step-end infinite; /* Adds typing and blinking animations to the links in the menu options */
+  animation: typing 0.5s steps(50, end), blink .75s step-end infinite;
+  /* Adds typing and blinking animations to the links in the menu options */
 }
 
 /* Typewriter animation */
 @keyframes typewriter {
-  from { width: 0; } /* Starts the animation with a width of 0 */
-  to { width: 100%; } /* Ends the animation with a width of 100% */
+  from {
+    width: 0;
+  }
+
+  /* Starts the animation with a width of 0 */
+  to {
+    width: 100%;
+  }
+
+  /* Ends the animation with a width of 100% */
 }
 
 /* Blinking text cursor animation */
 @keyframes blinkTextCursor {
-  from { border-color: rgb(0, 0, 0); } /* Starts the animation with a black border color */
-  to { border-color: transparent; } /* Ends the animation with a transparent border color */
+  from {
+    border-color: rgb(0, 0, 0);
+  }
+
+  /* Starts the animation with a black border color */
+  to {
+    border-color: transparent;
+  }
+
+  /* Ends the animation with a transparent border color */
 }
 
 /* Styles for the dark mode toggle button */
 #darkModeToggle {
-  font-family: 'Helvetica Neue', sans-serif; /* Sets the font of the button */
-  font-size: 1em; /* Sets the font size of the button */
-  font-weight: bold; /* Makes the text of the button bold */
-  color: #000; /* Sets the color of the button */
-  background: none; /* Removes the background of the button */
-  border: none; /* Removes the border of the button */
-  text-align: center; /* Centers the text inside the button */
-  text-decoration: none; /* Removes the text decoration of the button */
-  display: inline-block; /* Makes the button an inline-block element */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
-  transition: color 0.3s ease; /* Adds a transition effect to the color property */
-  position: fixed; /* Positions the button fixed */
-  bottom: 10px; /* Positions the button 10px from the bottom of the viewport */
-  right: 20px; /* Positions the button 20px from the right of the viewport */
+  font-family: 'Helvetica Neue', sans-serif;
+  /* Sets the font of the button */
+  font-size: 1em;
+  /* Sets the font size of the button */
+  font-weight: bold;
+  /* Makes the text of the button bold */
+  color: #000;
+  /* Sets the color of the button */
+  background: none;
+  /* Removes the background of the button */
+  border: none;
+  /* Removes the border of the button */
+  text-align: center;
+  /* Centers the text inside the button */
+  text-decoration: none;
+  /* Removes the text decoration of the button */
+  display: inline-block;
+  /* Makes the button an inline-block element */
+  cursor: pointer;
+  /* Changes the cursor to a pointer when hovering over the button */
+  transition: color 0.3s ease;
+  /* Adds a transition effect to the color property */
+  position: fixed;
+  /* Positions the button fixed */
+  bottom: 10px;
+  /* Positions the button 10px from the bottom of the viewport */
+  right: 20px;
+  /* Positions the button 20px from the right of the viewport */
 }
 
 
@@ -233,45 +360,64 @@ body.dark-mode .menu-button {
 
 /* Styles for the parent container */
 .parent-container {
-  position: relative; /* Makes the parent container a positioning context */
+  position: relative;
+  /* Makes the parent container a positioning context */
 }
 
 /* Dark mode styles for the dark mode toggle button */
 body.dark-mode #darkModeToggle {
-  color: #fff; /* Changes the color of the dark mode toggle button to white in dark mode */
+  color: #fff;
+  /* Changes the color of the dark mode toggle button to white in dark mode */
 }
 
 /* Hover styles for the dark mode toggle button */
 #darkModeToggle:hover {
-  color: #ff0000; /* Changes the color of the dark mode toggle button to red when hovered over */
+  color: #ff0000;
+  /* Changes the color of the dark mode toggle button to red when hovered over */
 }
 
 /* Hover styles for the light mode dark mode toggle button */
 #darkModeToggle.light-mode:hover {
-  color: #00d5ff; /* Changes the color of the dark mode toggle button to light blue when hovered over in light mode */
+  color: #00d5ff;
+  /* Changes the color of the dark mode toggle button to light blue when hovered over in light mode */
 }
 
 /* Styles for the cursor */
 #cursor {
-  width: 30px; /* Sets the width of the cursor */
-  height: 30px; /* Sets the height of the cursor */
-  border: 1px solid white; /* Adds a border around the cursor */
-  border-radius: 50%; /* Makes the cursor circular */
-  position: absolute; /* Positions the cursor absolutely */
-  pointer-events: none; /* Makes the cursor not respond to or trigger any events */
-  transform: translate(-50%, -50%); /* Centers the cursor */
-  mix-blend-mode: difference; /* Makes the cursor invert colors depending on the background */
-  background-color: white; /* Sets the background color of the cursor to white */
+  width: 30px;
+  /* Sets the width of the cursor */
+  height: 30px;
+  /* Sets the height of the cursor */
+  border: 1px solid white;
+  /* Adds a border around the cursor */
+  border-radius: 50%;
+  /* Makes the cursor circular */
+  position: absolute;
+  /* Positions the cursor absolutely */
+  pointer-events: none;
+  /* Makes the cursor not respond to or trigger any events */
+  transform: translate(-50%, -50%);
+  /* Centers the cursor */
+  mix-blend-mode: difference;
+  /* Makes the cursor invert colors depending on the background */
+  background-color: white;
+  /* Sets the background color of the cursor to white */
 }
 
 /* Styles for the typewriter */
 .typewriter {
-  width: fit-content; /* Makes the width of the typewriter fit its content */
-  overflow: hidden; /* Hides any content that overflows the typewriter */
-  border-right: .15em solid black; /* Adds a right border to the typewriter */
-  white-space: nowrap; /* Prevents the text inside the typewriter from wrapping */
-  animation: typing 2.5s steps(50, end), blink .75s step-end infinite; /* Adds typing and blinking animations to the typewriter */
-  direction: ltr; /* Sets the direction of the text inside the typewriter to left-to-right */
+  width: fit-content;
+  /* Makes the width of the typewriter fit its content */
+  overflow: hidden;
+  /* Hides any content that overflows the typewriter */
+  border-right: .15em solid black;
+  /* Adds a right border to the typewriter */
+  white-space: nowrap;
+  /* Prevents the text inside the typewriter from wrapping */
+  animation: typing 2.5s steps(50, end), blink .75s step-end infinite;
+  /* Adds typing and blinking animations to the typewriter */
+  direction: ltr;
+  /* Sets the direction of the text inside the typewriter to left-to-right */
 }
 
 /* Dark mode styles for the typewriter */
@@ -281,68 +427,108 @@ body.dark-mode #darkModeToggle {
 
 /* Defines a keyframes animation named typing */
 @keyframes typing {
-  from { width: 0; } /* At the start of the animation, the width is 0 */
-  to { width: 100%; } /* At the end of the animation, the width is 100% */
+  from {
+    width: 0;
+  }
+
+  /* At the start of the animation, the width is 0 */
+  to {
+    width: 100%;
+  }
+
+  /* At the end of the animation, the width is 100% */
 }
 
 /* Defines a keyframes animation named blink */
 @keyframes blink {
-  50% { border-color: transparent; } /* At the halfway point of the animation, the border color is transparent */
+  50% {
+    border-color: transparent;
+  }
+
+  /* At the halfway point of the animation, the border color is transparent */
 }
 
 /* Styles for the git link */
-.link-git{
-  color: var(--primary-color-dark); /* Sets the color of the git link to the dark primary color */
-  text-decoration: none; /* Removes the underline from the git link */
-  font-weight: bold; /* Makes the text of the git link bold */
-  transition: all 0.3s ease; /* Adds a transition effect to all properties of the git link */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over the git link */
+.link-git {
+  color: var(--primary-color-dark);
+  /* Sets the color of the git link to the dark primary color */
+  text-decoration: none;
+  /* Removes the underline from the git link */
+  font-weight: bold;
+  /* Makes the text of the git link bold */
+  transition: all 0.3s ease;
+  /* Adds a transition effect to all properties of the git link */
+  cursor: pointer;
+  /* Changes the cursor to a pointer when hovering over the git link */
 }
 
 /* Dark mode styles for the github link */
 .github-link.dark-mode {
-  color: white; /* Changes the color of the github link to white in dark mode */
+  color: white;
+  /* Changes the color of the github link to white in dark mode */
 }
 
 .logo {
-  position: absolute; /* Position the logo absolutely */
-  top: 0; /* Position the logo at the top of the header */
-  left: 50%; /* Center the logo horizontally */
-  transform: translateX(-50%); /* Adjust for the logo's width to ensure it's centered */
-  padding-top: 10px; /* Add padding to the top */
+  position: absolute;
+  /* Position the logo absolutely */
+  top: 0;
+  /* Position the logo at the top of the header */
+  left: 50%;
+  /* Center the logo horizontally */
+  transform: translateX(-50%);
+  /* Adjust for the logo's width to ensure it's centered */
+  padding-top: 10px;
+  /* Add padding to the top */
 }
 
 /* Styles for the logo image */
 .logo img {
-  width: 50px; /* Sets the width of the logo image to 50px */
-  height: 50px; /* Sets the height of the logo image to 50px */
+  width: 50px;
+  /* Sets the width of the logo image to 50px */
+  height: 50px;
+  /* Sets the height of the logo image to 50px */
 }
 
 /* Styles for the header */
 .header {
-  display: flex; /* Makes the header a flex container */
-  justify-content: space-between; /* Distributes space evenly between the flex items */
-  align-items: center; /* Centers the flex items along the vertical line */
-  width: 100%; /* Sets the width of the header to 100% */
+  display: flex;
+  /* Makes the header a flex container */
+  justify-content: space-between;
+  /* Distributes space evenly between the flex items */
+  align-items: center;
+  /* Centers the flex items along the vertical line */
+  width: 100%;
+  /* Sets the width of the header to 100% */
 }
 
 /* Styles for the footer */
 footer {
-  position: fixed; /* Positions the footer fixed */
-  bottom: 0; /* Positions the footer at the bottom of the viewport */
-  left: 50%; /* Positions the left edge of the footer at the middle of the viewport */
-  transform: translateX(-50%); /* Moves the footer to the left by half of its width to ensure it's centered */
-  padding-bottom: 10px; /* Adds a bottom padding to the footer */
-  margin-left: auto; /* Sets the left margin of the footer to auto */
-  margin-right: auto; /* Sets the right margin of the footer to auto */
+  position: fixed;
+  /* Positions the footer fixed */
+  bottom: 0;
+  /* Positions the footer at the bottom of the viewport */
+  left: 50%;
+  /* Positions the left edge of the footer at the middle of the viewport */
+  transform: translateX(-50%);
+  /* Moves the footer to the left by half of its width to ensure it's centered */
+  padding-bottom: 10px;
+  /* Adds a bottom padding to the footer */
+  margin-left: auto;
+  /* Sets the left margin of the footer to auto */
+  margin-right: auto;
+  /* Sets the right margin of the footer to auto */
 }
 
 /* Styles for the footer on screens that are 768px or less wide */
 @media (max-width: 768px) {
   footer {
-    position: fixed; /* Positions the footer fixed */
-    bottom: 0; /* Positions the footer at the bottom of the viewport */
-    left: 0%; /* Positions the left edge of the footer at the left edge of the viewport */
-    padding-left: 200px; /* Adds a left padding of 200px to the footer */
+    position: fixed;
+    /* Positions the footer fixed */
+    bottom: 0;
+    /* Positions the footer at the bottom of the viewport */
+    left: 0%;
+    /* Positions the left edge of the footer at the left edge of the viewport */
+    padding-left: 200px;
+    /* Adds a left padding of 200px to the footer */
   }
 }

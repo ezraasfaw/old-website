@@ -1,83 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-store" />
 
-    <!-- Stylesheets -->
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles.css?v=123">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store" />
 
-    <!-- Page title -->
-    <title>Home</title>
+  <!-- Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css?v=123">
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/ytlogo.ico">
-  </head>
+  <!-- Page title -->
+  <title>Home</title>
 
-  <body>
-    <header>
-      <!-- Logo -->
-      <div class="logo">
-        <a href="./">
-          <img id="logoImage" src="assets/logo_B.png" alt="Logo">
-        </a>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/ytlogo.ico">
+</head>
+
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="./">
+        <img id="logoImage" src="assets/logo_B.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- Header right section -->
+    <div class="header-right">
+      <!-- Language toggle -->
+      <div class="language-toggle">
+        <!-- English to French toggle goes here -->
       </div>
 
-      <!-- Header right section -->
-      <div class="header-right">
-        <!-- Language toggle -->
-        <div class="language-toggle">
-          <!-- English to French toggle goes here -->
-        </div>
-
-        <!-- Menu button -->
-        <div id="buttonsContainer">
-          <button class="menu-button">MENU</button>
-        </div>
-
-        <!-- Text container -->
-        <div class="text-container">
-          <!-- Your text goes here -->
-        </div>
-
-        <!-- Menu options -->
-        <div id="menuOptions" style="display: none;">
-          <ul>
-            <li><a href="./">> HOME</a></li>
-            <li><a href="./about">> ABOUT</a></li>
-            <li><a href="./experiences">> EXPERIENCES</a></li>
-            <li><a href="./projects">> PROJECTS</a></li>
-            <li><a href="./contact">> CONTACT</a></li>
-          </ul>
-        </div>
+      <!-- Menu button -->
+      <div id="buttonsContainer">
+        <button class="menu-button">MENU</button>
       </div>
 
-      <!-- Dark mode toggle button -->
-      <button id="darkModeToggle">DARK MODE</button>
-
-      <!-- Back button -->
-      <div class="back-button">
-        <ul>
-          <!-- Back button options go here -->
-        </ul>
-      </div>
-    </header>
-
-    <!-- Typewriter effect container -->
-    <div class="typewriter">
       <!-- Text container -->
-      <div class="text">
-        <h1>HI, I'M EZRA</h1>
-        <p>I'M AN UNDERGRADUATE STUDENT STUDYING SOFTWARE ENGINEERING. I HAVE A STRONG INTEREST IN FINTECH, BLOCKCHAIN, AND CYBERSECURITY. I BELIEVE THESE FIELDS ARE TRANSFORMING THE WAY WE INTERACT WITH TECHNOLOGY AND I'M EXCITED TO BE PART OF THAT JOURNEY.</p>
+      <div class="text-container">
+        <!-- Your text goes here -->
       </div>
 
-      <!-- Navigation content -->
-      <div class="nav_content">
+      <!-- Menu options -->
+      <div id="menuOptions" style="display: none;">
         <ul>
+          <li><a href="./">> HOME</a></li>
           <li><a href="./about">> ABOUT</a></li>
           <li><a href="./experiences">> EXPERIENCES</a></li>
           <li><a href="./projects">> PROJECTS</a></li>
@@ -86,19 +57,52 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="link_wrapper">
-        <div class="footer_text">
-          <p>© 2024 EZRA ASFAW</p>
-        </div>
+    <!-- Dark mode toggle button -->
+    <button id="darkModeToggle">DARK MODE</button>
+
+    <!-- Back button -->
+    <div class="back-button">
+      <ul>
+        <!-- Back button options go here -->
+      </ul>
+    </div>
+  </header>
+
+  <!-- Typewriter effect container -->
+  <div class="typewriter">
+    <!-- Text container -->
+    <div class="text">
+      <h1>HI, I'M EZRA</h1>
+      <p>I'M AN UNDERGRADUATE STUDENT STUDYING SOFTWARE ENGINEERING. I HAVE A STRONG INTEREST IN FINTECH, BLOCKCHAIN,
+        AND CYBERSECURITY. I BELIEVE THESE FIELDS ARE TRANSFORMING THE WAY WE INTERACT WITH TECHNOLOGY AND I'M EXCITED
+        TO BE PART OF THAT JOURNEY.</p>
+    </div>
+
+    <!-- Navigation content -->
+    <div class="nav_content">
+      <ul>
+        <li><a href="./about">> ABOUT</a></li>
+        <li><a href="./experiences">> EXPERIENCES</a></li>
+        <li><a href="./projects">> PROJECTS</a></li>
+        <li><a href="./contact">> CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="link_wrapper">
+      <div class="footer_text">
+        <p>© 2024 EZRA ASFAW</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Cursor -->
-    <div id="cursor"></div>
+  <!-- Cursor -->
+  <div id="cursor"></div>
 
-    <!-- JavaScript -->
-    <script src="script.js?v=123"></script>
-  </body>
+  <!-- JavaScript -->
+  <script src="script.js?v=123"></script>
+</body>
+
 </html>
