@@ -53,6 +53,24 @@ window.onload = function () {
     cursor.style.top = touch.pageY + 'px';
   }, { passive: false }); // This line tells the browser that the event handler may call preventDefault()
 
+  // Event listener for touch start
+  document.addEventListener('touchstart', function (e) {
+    // Show the cursor when the touch starts
+    cursor.style.display = 'block';
+  });
+
+  // Event listener for touch move
+  document.addEventListener('touchmove', function (e) {
+    // Update the cursor's position to follow the touch
+    cursor.style.left = e.touches[0].pageX + 'px';
+    cursor.style.top = e.touches[0].pageY + 'px';
+  });
+
+  // Event listener for touch end
+  document.addEventListener('touchend', function (e) {
+    // Hide the cursor when the touch ends
+    cursor.style.display = 'none';
+  });
 
   /// Hide the cursor as soon as the script is loaded
   $('#cursor').hide();
