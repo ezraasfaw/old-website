@@ -100,6 +100,8 @@ body.dark-mode {
   /* Makes the nav content a flex container */
   justify-content: center;
   /* Centers the flex items along the horizontal line */
+  text-align: center;
+  /* Centers the text */
 }
 
 /* Styles for the intro text inside the nav content */
@@ -160,11 +162,25 @@ ul li a {
   /* Changes the color of the links in dark mode */
 }
 
+
+
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   ul {
     flex-direction: column;
     /* Changes the direction of the flex items to a column */
+  }
+
+  .nav-content {
+    text-align: center;
+    /* Centers the text */
+      align-items: center;
+  /* Centers the flex items along the vertical line */
+  }
+
+  .menu-options {
+    text-align: center;
+    /* Centers the text */
   }
 }
 

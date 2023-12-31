@@ -160,6 +160,9 @@ window.onload = function () {
     });
   }
 
+  // Get the back button element
+  const back = document.querySelector('.back-button');
+
   // Add event listeners for mouseover and mouseout to the back button
   back.addEventListener('mouseover', () => {
     cursor.style.backgroundColor = 'red';
@@ -170,17 +173,6 @@ window.onload = function () {
     cursor.style.mixBlendMode = "difference"; // This will invert the color
   });
 }
-
-  // Add event listeners for mouseover and mouseout to the back button
-  link.addEventListener('mouseover', () => {
-    cursor.style.backgroundColor = 'red';
-  });
-
-  link.addEventListener('mouseout', () => {
-    cursor.style.backgroundColor = 'white';
-    cursor.style.mixBlendMode = "difference"; // This will invert the color
-  });
-
 
 
 // Add event listeners for mouseover and mouseout to the menu button
@@ -287,6 +279,16 @@ links.forEach(link => {
     cursor.style.mixBlendMode = "difference"; // This will invert the color
   });
 });
+
+  // Add event listeners for mouseover and mouseout to the back button
+  link.addEventListener('mouseover', () => {
+    cursor.style.backgroundColor = 'red';
+  });
+
+  link.addEventListener('mouseout', () => {
+    cursor.style.backgroundColor = 'white';
+    cursor.style.mixBlendMode = "difference"; // This will invert the color
+  });
 
 // Get the current year
 var currentYear = new Date().getFullYear();
