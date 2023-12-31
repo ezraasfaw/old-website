@@ -159,3 +159,26 @@ menuButton.addEventListener('click', function () {
   // Toggle the 'hidden' class on the back button
   backButton.classList.toggle('hidden');
 });
+
+// Get all the 'a' elements
+var links = document.querySelectorAll('a');
+
+// Add event listeners to each 'a' element
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    // Prevent the default action
+    e.preventDefault();
+
+    // Manually redirect to the href
+    window.location.href = this.href;
+  });
+
+  link.addEventListener('mouseover', () => {
+    cursor.style.backgroundColor = 'red';
+  });
+
+  link.addEventListener('mouseout', () => {
+    cursor.style.backgroundColor = 'white';
+    cursor.style.mixBlendMode = "difference"; // This will invert the color
+  });
+});
