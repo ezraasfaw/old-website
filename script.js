@@ -280,15 +280,24 @@ links.forEach(link => {
   });
 });
 
-  // Add event listeners for mouseover and mouseout to the back button
-  link.addEventListener('mouseover', () => {
-    cursor.style.backgroundColor = 'red';
-  });
+// Add event listeners for mouseover and mouseout to the back button
+link.addEventListener('mouseover', () => {
+  cursor.style.backgroundColor = 'red';
+});
 
-  link.addEventListener('mouseout', () => {
-    cursor.style.backgroundColor = 'white';
-    cursor.style.mixBlendMode = "difference"; // This will invert the color
-  });
+link.addEventListener('mouseout', () => {
+  cursor.style.backgroundColor = 'white';
+  cursor.style.mixBlendMode = "difference"; // This will invert the color
+});
+
+// Add an event listener to the back button
+back.addEventListener('click', function (e) {
+  // Prevent the default action
+  e.preventDefault();
+
+  // Go back to the previous page
+  window.history.back();
+});
 
 // Get the current year
 var currentYear = new Date().getFullYear();
