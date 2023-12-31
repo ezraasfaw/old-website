@@ -277,3 +277,12 @@ links.forEach(link => {
     cursor.style.mixBlendMode = "difference"; // This will invert the color
   });
 });
+
+// Get the current year
+var currentYear = new Date().getFullYear();
+
+// Get the element with the id "year"
+var yearElement = document.getElementById('year');
+
+// Set the text of the year element to the current year
+yearElement.textContent = currentYear;
