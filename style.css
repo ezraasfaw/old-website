@@ -40,6 +40,11 @@ html {
   /* Makes scrolling smooth */
 }
 
+h1 {
+  margin-bottom: 20px;
+  /* Adds a bottom margin to the h1 element */
+}
+
 /* Body styles */
 body {
   font-family: 'Helvetica Neue', sans-serif;
@@ -92,6 +97,8 @@ body.dark-mode {
   /* Centers the text */
   text-align-last: center;
   /* Centers the last line of text */
+  margin-bottom: 20px;
+  /* Adds a bottom margin to the .text element */
 }
 
 /* Styles for the nav content */
@@ -102,6 +109,10 @@ body.dark-mode {
   /* Centers the flex items along the horizontal line */
   text-align: center;
   /* Centers the text */
+  margin-top: 20px;
+  /* Adds a top margin to the .nav_content element */
+  margin-bottom: 20px;
+  /* Adds a top margin to the .nav_content element */
 }
 
 /* Styles for the intro text inside the nav content */
