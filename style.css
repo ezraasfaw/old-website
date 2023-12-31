@@ -448,10 +448,11 @@ body.dark-mode #darkModeToggle {
   /* At the halfway point of the animation, the border color is transparent */
 }
 
-/* Styles for the git link */
-.link-git {
-  color: var(--primary-color-dark);
-  /* Sets the color of the git link to the dark primary color */
+/* This is the .link class. Add your styles below. */
+.link {
+  /* Makes the text bold */
+  font-weight: bold;
+  color: red;
   text-decoration: none;
   /* Removes the underline from the git link */
   font-weight: bold;
@@ -460,12 +461,6 @@ body.dark-mode #darkModeToggle {
   /* Adds a transition effect to all properties of the git link */
   cursor: pointer;
   /* Changes the cursor to a pointer when hovering over the git link */
-}
-
-/* Dark mode styles for the github link */
-.github-link.dark-mode {
-  color: white;
-  /* Changes the color of the github link to white in dark mode */
 }
 
 .logo {

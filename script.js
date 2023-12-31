@@ -10,6 +10,8 @@ const typewriter = document.querySelector('.typewriter');
 const backButton = document.querySelector('.back-button');
 const text = document.querySelector('.text');
 const ul = document.querySelector('ul');
+const link = document.querySelector('.link');
+
 
 // Wait for the window to load before executing the script
 window.onload = function () {
@@ -158,9 +160,6 @@ window.onload = function () {
     });
   }
 
-  // Get the back button element
-  const back = document.querySelector('.back-button');
-
   // Add event listeners for mouseover and mouseout to the back button
   back.addEventListener('mouseover', () => {
     cursor.style.backgroundColor = 'red';
@@ -171,6 +170,17 @@ window.onload = function () {
     cursor.style.mixBlendMode = "difference"; // This will invert the color
   });
 }
+
+  // Add event listeners for mouseover and mouseout to the back button
+  link.addEventListener('mouseover', () => {
+    cursor.style.backgroundColor = 'red';
+  });
+
+  link.addEventListener('mouseout', () => {
+    cursor.style.backgroundColor = 'white';
+    cursor.style.mixBlendMode = "difference"; // This will invert the color
+  });
+
 
 
 // Add event listeners for mouseover and mouseout to the menu button
