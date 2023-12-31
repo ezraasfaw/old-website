@@ -15,30 +15,30 @@ const ul = document.querySelector('ul');
 window.onload = function () {
   // Get the cursor element
   // Get the cursor element
-var cursor = document.getElementById('cursor');
+  var cursor = document.getElementById('cursor');
 
-// Hide the cursor as soon as the script is loaded
-cursor.style.display = 'none';
-
-// Event listener for mouse movement
-document.addEventListener('mousemove', function (e) {
-  // Update the cursor's position to follow the mouse
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
-  cursor.style.display = 'block'; // Show the cursor when the mouse moves
-}, false);
-
-// Event listener for mouse entering the window
-document.addEventListener('mouseenter', function (e) {
-  // Show the cursor when the mouse enters the window
-  cursor.style.display = 'block';
-});
-
-// Event listener for mouse leaving the window
-document.addEventListener('mouseleave', function (e) {
-  // Hide the cursor when the mouse leaves the window
+  // Hide the cursor as soon as the script is loaded
   cursor.style.display = 'none';
-});
+
+  // Event listener for mouse movement
+  document.addEventListener('mousemove', function (e) {
+    // Update the cursor's position to follow the mouse
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+    cursor.style.display = 'block'; // Show the cursor when the mouse moves
+  }, false);
+
+  // Event listener for mouse entering the window
+  document.addEventListener('mouseenter', function (e) {
+    // Show the cursor when the mouse enters the window
+    cursor.style.display = 'block';
+  });
+
+  // Event listener for mouse leaving the window
+  document.addEventListener('mouseleave', function (e) {
+    // Hide the cursor when the mouse leaves the window
+    cursor.style.display = 'none';
+  });
 
   // Event listener for touch movement
   document.addEventListener('touchmove', function (e) {
@@ -54,80 +54,80 @@ document.addEventListener('mouseleave', function (e) {
   }, { passive: false }); // This line tells the browser that the event handler may call preventDefault()
 
 
-/// Hide the cursor as soon as the script is loaded
-$('#cursor').hide();
+  /// Hide the cursor as soon as the script is loaded
+  $('#cursor').hide();
 
-// Variables to store the cursor's position
-var cursorX = 0;
-var cursorY = 0;
+  // Variables to store the cursor's position
+  var cursorX = 0;
+  var cursorY = 0;
 
-// Function to update the cursor's position
-function updateCursorPosition(e) {
-  cursorX = e.clientX;
-  cursorY = e.clientY;
-}
-
-// Add an event listener to update the cursor's position
-document.addEventListener('mousemove', updateCursorPosition);
-
-// Function to add the cursor effect
-function addCursorEffect() {
-  $('#cursor').show();
-  // Add the rest of your cursor effect code here...
-}
-
-// Add the cursor effect when the page is loaded
-window.onload = function() {
-  // Check if the cursor is inside the window
-  if (cursorX > 0 && cursorX < window.innerWidth && cursorY > 0 && cursorY < window.innerHeight) {
-    // If the cursor is inside the window, add the cursor effect
-    addCursorEffect();
+  // Function to update the cursor's position
+  function updateCursorPosition(e) {
+    cursorX = e.clientX;
+    cursorY = e.clientY;
   }
-};
 
-$(document).ready(function() {
-  // Add the cursor effect when the mouse enters the document
-  $(document).mouseenter(addCursorEffect);
+  // Add an event listener to update the cursor's position
+  document.addEventListener('mousemove', updateCursorPosition);
 
-  // Hide the cursor when the mouse leaves the document
-  $(document).mouseleave(function() {
-    $('#cursor').hide();
+  // Function to add the cursor effect
+  function addCursorEffect() {
+    $('#cursor').show();
+    // Add the rest of your cursor effect code here...
+  }
+
+  // Add the cursor effect when the page is loaded
+  window.onload = function () {
+    // Check if the cursor is inside the window
+    if (cursorX > 0 && cursorX < window.innerWidth && cursorY > 0 && cursorY < window.innerHeight) {
+      // If the cursor is inside the window, add the cursor effect
+      addCursorEffect();
+    }
+  };
+
+  $(document).ready(function () {
+    // Add the cursor effect when the mouse enters the document
+    $(document).mouseenter(addCursorEffect);
+
+    // Hide the cursor when the mouse leaves the document
+    $(document).mouseleave(function () {
+      $('#cursor').hide();
+    });
   });
-});
 
-// Add the cursor effect when the tab becomes visible
-document.addEventListener('visibilitychange', function() {
-  if (!document.hidden) {
-    addCursorEffect();
-  }
-});
-
-// Function to add the cursor effect
-function addCursorEffect() {
-  $('#cursor').show();
-  // Add the rest of your cursor effect code here...
-}
-
-// Add the cursor effect when the page is loaded
-window.onload = function() {
-  // Check if the cursor is inside the window
-  var cursorX = window.event.clientX;
-  var cursorY = window.event.clientY;
-  if (cursorX > 0 && cursorX < window.innerWidth && cursorY > 0 && cursorY < window.innerHeight) {
-    // If the cursor is inside the window, add the cursor effect
-    addCursorEffect();
-  }
-};
-
-$(document).ready(function() {
-  // Add the cursor effect when the mouse enters the document
-  $(document).mouseenter(addCursorEffect);
-
-  // Hide the cursor when the mouse leaves the document
-  $(document).mouseleave(function() {
-    $('#cursor').hide();
+  // Add the cursor effect when the tab becomes visible
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) {
+      addCursorEffect();
+    }
   });
-});
+
+  // Function to add the cursor effect
+  function addCursorEffect() {
+    $('#cursor').show();
+    // Add the rest of your cursor effect code here...
+  }
+
+  // Add the cursor effect when the page is loaded
+  window.onload = function () {
+    // Check if the cursor is inside the window
+    var cursorX = window.event.clientX;
+    var cursorY = window.event.clientY;
+    if (cursorX > 0 && cursorX < window.innerWidth && cursorY > 0 && cursorY < window.innerHeight) {
+      // If the cursor is inside the window, add the cursor effect
+      addCursorEffect();
+    }
+  };
+
+  $(document).ready(function () {
+    // Add the cursor effect when the mouse enters the document
+    $(document).mouseenter(addCursorEffect);
+
+    // Hide the cursor when the mouse leaves the document
+    $(document).mouseleave(function () {
+      $('#cursor').hide();
+    });
+  });
 
   // If the ul element exists, add event listeners for mouseover and mouseout
   if (ul) {
@@ -242,7 +242,7 @@ var links = document.querySelectorAll('a');
 
 // Add event listeners to each 'a' element
 links.forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function (e) {
     // Prevent the default action
     e.preventDefault();
 
