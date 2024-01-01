@@ -185,8 +185,8 @@ ul li a {
   .nav-content {
     text-align: center;
     /* Centers the text */
-      align-items: center;
-  /* Centers the flex items along the vertical line */
+    align-items: center;
+    /* Centers the flex items along the vertical line */
   }
 
   .menu-options {
@@ -554,4 +554,3 @@ footer {
     /* Adds a left padding of 200px to the footer */
   }
 }
-
