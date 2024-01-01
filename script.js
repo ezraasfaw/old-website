@@ -239,6 +239,9 @@ menuOptions.addEventListener('mouseout', () => {
 
 // Add event listener for click to the menu button
 menuButton.addEventListener('click', () => {
+// Toggle the 'hidden' class on the back button
+backButton.classList.toggle('hidden');
+
   // If menuOptions is displayed, hide it, otherwise, display it
   if (menuOptions.style.display === 'block') {
     location.reload(); // Refresh the current page
@@ -251,11 +254,6 @@ menuButton.addEventListener('click', () => {
   }
 });
 
-// Add an event listener to the menu button
-menuButton.addEventListener('click', function () {
-  // Toggle the 'hidden' class on the back button
-  backButton.classList.toggle('hidden');
-});
 
 // Get all the 'a' elements
 var links = document.querySelectorAll('a');
