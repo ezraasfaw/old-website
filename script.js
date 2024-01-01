@@ -304,12 +304,3 @@ back.addEventListener('click', function (e) {
   // Go back to the previous page
   window.history.back();
 });
-
-// Get the current year
-var currentYear = new Date().getFullYear();
-
-// Get the element with the id "year"
-var yearElement = document.getElementById('year');
-
-// Set the text of the year element to the current year
-yearElement.textContent = currentYear;

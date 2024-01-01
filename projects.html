@@ -112,12 +112,17 @@
 
 <!-- Footer section starts -->
 <footer>
-  <!-- Link wrapper -->
-  <div class="link_wrapper">
-    <!-- Footer text -->
-    <div class="footer_text">
-      <p>&copy; <span id="year"></span> EZRA ASFAW</p>
-    </div>
+  <div class="footer_text">
+    <!-- Copyright notice -->
+    <!-- The 'span' element with id 'year' will display the current year -->
+    <p>&copy; <span id="year"></span> EZRA ASFAW</p>
+
+    <!-- Inline JavaScript -->
+    <script>
+      // Get the HTML element with id 'year'
+      // Set its text content to the current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </div>
 </footer>
 <!-- Footer section ends -->

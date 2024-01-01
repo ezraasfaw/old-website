@@ -55,7 +55,7 @@
           <li><a href="./contact">"CONTACT"</a></li>
         </ul>
       </div>
-    
+
     </div>
 
     <!-- Dark mode toggle button -->
@@ -71,31 +71,40 @@
 
   <!-- Typewriter effect container -->
   <div class="typewriter">
-  <!-- Text container -->
-  <div class="text">
-    <h1>HI, I'M EZRA</h1>
-    <p>I’M AN UNDERGRADUATE STUDENT STUDYING SOFTWARE ENGINEERING WITH A STRONG INTEREST IN FINTECH, BLOCKCHAIN, AND
-      CYBERSECURITY.
-      I BELIEVE THESE FIELDS ARE TRANSFORMING THE WAY WE INTERACT WITH TECHNOLOGY, AND I’M EXCITED TO BE PART OF THAT
-      JOURNEY.
-      EXPLORE MY WEBSITE TO LEARN MORE ABOUT ME AND MY WORK.</p>
+    <!-- Text container -->
+    <div class="text">
+      <h1>HI, I'M EZRA</h1>
+      <p>I’M AN UNDERGRADUATE STUDENT STUDYING SOFTWARE ENGINEERING WITH A STRONG INTEREST IN FINTECH, BLOCKCHAIN, AND
+        CYBERSECURITY.
+        I BELIEVE THESE FIELDS ARE TRANSFORMING THE WAY WE INTERACT WITH TECHNOLOGY, AND I’M EXCITED TO BE PART OF THAT
+        JOURNEY.
+        EXPLORE MY WEBSITE TO LEARN MORE ABOUT ME AND MY WORK.</p>
+    </div>
+
+    <!-- Navigation content -->
+    <div class="nav_content">
+      <ul>
+        <li><a href="./about">"ABOUT"</a></li>
+        <li><a href="./experiences">"EXPERIENCES"</a></li>
+        <li><a href="./projects">"PROJECTS"</a></li>
+        <li><a href="./contact">"CONTACT"</a></li>
+      </ul>
+    </div>
   </div>
 
-  <!-- Navigation content -->
-  <div class="nav_content">
-    <ul>
-      <li><a href="./about">"ABOUT"</a></li>
-      <li><a href="./experiences">"EXPERIENCES"</a></li>
-      <li><a href="./projects">"PROJECTS"</a></li>
-      <li><a href="./contact">"CONTACT"</a></li>
-    </ul>
-  </div>
-  </div>
-
-  <!-- Footer -->
+  <!-- Footer section starts -->
   <footer>
     <div class="footer_text">
+      <!-- Copyright notice -->
+      <!-- The 'span' element with id 'year' will display the current year -->
       <p>&copy; <span id="year"></span> EZRA ASFAW</p>
+
+      <!-- Inline JavaScript -->
+      <script>
+        // Get the HTML element with id 'year'
+        // Set its text content to the current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
     </div>
   </footer>
 
