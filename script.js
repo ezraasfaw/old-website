@@ -239,8 +239,8 @@ menuOptions.addEventListener('mouseout', () => {
 
 // Add event listener for click to the menu button
 menuButton.addEventListener('click', () => {
-// Toggle the 'hidden' class on the back button
-backButton.classList.toggle('hidden');
+  // Toggle the 'hidden' class on the back button
+  backButton.classList.toggle('hidden');
 
   // If menuOptions is displayed, hide it, otherwise, display it
   if (menuOptions.style.display === 'block') {
@@ -251,6 +251,14 @@ backButton.classList.toggle('hidden');
     nav.innerHTML = ''; // Hide the nav-content
     menuOptions.style.display = 'block'; // Display the navigation options
     nav.style.display = 'block'; // Show the nav-content
+
+    // Find all elements with the 'typewriter' class
+    const typewriterElements = document.querySelectorAll('.typewriter');
+
+    // For each typewriter element, toggle the 'paused' class
+    typewriterElements.forEach(el => {
+      el.classList.toggle('paused');
+    });
   }
 });
 

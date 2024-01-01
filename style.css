@@ -447,6 +447,16 @@ body.dark-mode #darkModeToggle {
   /* Sets the direction of the text inside the typewriter to left-to-right */
 }
 
+/* The 'paused' class is used to pause CSS animations. */
+.paused {
+  animation-play-state: paused;
+  /* The 'animation-play-state' property specifies whether the animation is running or paused. */
+  /* In this case, it's set to 'paused', which means any element with the 'paused' class will have its animations paused. */
+  border-right: none;
+   /* The 'border-right' property sets the style of the right border of an element. */
+  /* In this case, it's set to 'none', which means any element with the 'paused' class will have no right border. */
+}
+
 /* Dark mode styles for the typewriter */
 .typewriter.dark-mode {
   border-right: .15em solid white;
