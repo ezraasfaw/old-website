@@ -304,3 +304,4 @@ back.addEventListener('click', function (e) {
   // Go back to the previous page
   window.history.back();
 });
+

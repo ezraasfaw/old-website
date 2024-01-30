@@ -192,6 +192,8 @@ ul li a {
   .menu-options {
     text-align: center;
     /* Centers the text */
+    align-items: center;
+    /* Centers the flex items along the vertical line */
   }
 }
 
